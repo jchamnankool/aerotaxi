@@ -1,37 +1,36 @@
 <template>
     <div class="form1">
         <div class="text">
-            <span> Get 50% OFF!</span>
+            <span>Get 50% OFF!</span>
             <p> Your next ride by joining our Newsletter</p>
         </div>
         <form class='ui form' ref='form' @submit.prevent='submit'>
-            <div>
+            <div class="formField">
                 <label id="eggs">First Name
-               
-                <input id="chicken" type="text" placeholder="Enter your name" v-model="firstName" required />
-                <ul v-if="firstNameErrors.length">
-                    <li v-for="e in firstNameErrors" :key="e">{{  e  }}</li>
-                </ul>
+                    <input id="chicken" type="text" placeholder="Enter your name" v-model="firstName" required />
+                    <ul v-if="firstNameErrors.length">
+                        <li v-for="e in firstNameErrors" :key="e">{{  e  }}</li>
+                    </ul>
                 </label>
             </div>
-                <div>
-                <label id="eggs"> Surname
-                <input id="chicken"  type="text" placeholder="Enter your Surname" v-model="lastName" required  />
-                <ul v-if="lastNameErrors.length">
-                    <li v-for="e in lastNameErrors" :key="e">{{  e  }}</li>
-                </ul>
+            <div class="formField">
+                <label id="eggs">Last Name
+                    <input id="chicken" type="text" placeholder="Enter your Surname" v-model="lastName" required />
+                    <ul v-if="lastNameErrors.length">
+                        <li v-for="e in lastNameErrors" :key="e">{{  e  }}</li>
+                    </ul>
                 </label>
             </div>
-                <div>
+            <div class="formField">
                 <label id="eggs">E-mail
-                <input id="chicken"  type="text" placeholder="Enter your Email" v-model="email" required />
-                 <ul v-if="emailErrors.length">
-                    <li v-for="e in emailErrors" :key="e">{{  e  }}</li>
-                </ul>
+                    <input id="chicken" type="text" placeholder="Enter your Email" v-model="email" required />
+                    <ul v-if="emailErrors.length">
+                        <li v-for="e in emailErrors" :key="e">{{  e  }}</li>
+                    </ul>
                 </label>
             </div>
-             <!-- TODO: newsletter frequency in a dropdown menu: weekly (default), fortnightly, monthly -->
-            <div>
+            <!-- TODO: newsletter frequency in a dropdown menu: weekly (default), fortnightly, monthly -->
+            <!-- <div>
                 <label id="eggs">Newsletter frequency</label>
                 <div class="ui selection dropdown">
                     <input type="hidden" name="frequency">
@@ -43,7 +42,7 @@
                         <div class="item" data-value="0">Monthly</div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="field">
                 <div class="ui checkbox">
@@ -55,9 +54,9 @@
                 </div>
             </div>
 
-           <button class="ui button" id="btn" type="submit">Confirm</button>
+            <button class="ui button" id="btn" type="submit">Confirm</button>
         </form>
-    </div>    
+    </div>
 </template>
 
 <script>
@@ -120,7 +119,7 @@ export default {
                 this.emailErrors.push("❌ An email address must contain at least one full stop (.)");
             }
         },
-        generateVoucherCode: function() {
+        generateVoucherCode: function () {
             const randomNum = Math.floor(Math.random() * 999);
             const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             let randomLetters = "";
@@ -168,46 +167,62 @@ export default {
 .error {
     color: red;
 }
-.form1{
+
+.form1 {
     border: 2px solid black;
     border-radius: 15px;
     margin: 10px;
     text-align: center;
-
+    background-color: grey;
+    color: #000;
+    padding: 24px 0;
 }
-.text{
+
+.formField {
+    margin: 12px 0;
+}
+
+.text {
     text-align: center;
     justify-items: center;
 }
-h1{
+
+h1 {
     text-decoration: underline;
     padding-bottom: 5px;
 }
-.text p, .text span{
+
+.text p,
+.text span {
     font-size: 190%;
     margin-bottom: 20px;
 }
-.text span{
+
+.text span {
     text-decoration: underline;
     font-weight: bold;
 }
+
 #chicken {
     text-align: center;
     width: 300px;
 }
-#eggs{
+
+#eggs {
     font-size: 125%;
     display: inline-block;
 
 }
-#btn{
-    margin:5px;
+
+#btn {
+    margin: 5px;
     background-color: rgb(220, 247, 247);
     border-radius: 5px;
     width: 10em;
     margin: 10px auto;
 }
-.checkbox{
+
+.checkbox {
     margin: 10px;
 }
 </style>

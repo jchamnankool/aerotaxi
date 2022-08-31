@@ -49,10 +49,11 @@ export default {
     font-family: 'Anybody', cursive;
     text-decoration: none;
     font-size: 32px;
+    padding: 24px 0;
     text-shadow: 2px 2px 5px #1B9B9B;
 }
 
-.btn{
+.btn {
     font-weight: bold;
     font-size: 120%;
     border-radius: 30px;

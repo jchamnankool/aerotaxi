@@ -17,7 +17,6 @@
         </router-link>
       </div>
 
-
     </div>
     <div class="ui container">
       <div class="ui one column">
