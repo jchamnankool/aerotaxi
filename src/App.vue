@@ -92,6 +92,7 @@ button.ui.button {
 
 #navIconCurrent {
   color: #fff;
+  visibility: hidden;
 }
 
 #userIcon {
@@ -126,6 +127,10 @@ button.ui.button {
   }
 
   #navIcon {
+    visibility: visible;
+  }
+  
+  #navIconCurrent {
     visibility: visible;
   }
 }
