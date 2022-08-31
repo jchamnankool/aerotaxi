@@ -1,33 +1,36 @@
 <template>
-    <div>
-        <form class="ui form" ref="form" @submit.prevent="submit">
-            <div class="field">
-                <label>First Name</label>
-                <input type="text" placeholder="We like to know who you are" v-model="firstName" required />
+    <div class="form1">
+        <div class="text">
+            <span> Get 50% OFF!</span>
+            <p> Your next ride by joining our Newsletter</p>
+        </div>
+        <form class='ui form' ref='form' @submit.prevent='submit'>
+            <div>
+                <label id="eggs">First Name</label>
+               
+                <input id="chicken" type="text" placeholder="Enter your name" v-model="firstName" required />
                 <ul v-if="firstNameErrors.length">
                     <li v-for="e in firstNameErrors" :key="e">{{  e  }}</li>
                 </ul>
-            </div>
 
-            <div class="field">
-                <label>Last Name</label>
-                <input type="text" placeholder="We really like to know who you are" v-model="lastName" required />
+            </div>
+                <div>
+                <label id="eggs"> Surname</label>
+                <input id="chicken"  type="text" placeholder="Enter your Surname" v-model="lastName" required  />
                 <ul v-if="lastNameErrors.length">
                     <li v-for="e in lastNameErrors" :key="e">{{  e  }}</li>
                 </ul>
             </div>
-
-            <div class="field">
-                <label>Email</label>
-                <input type="text" placeholder="Don't worry we won't spam you" v-model="email" required />
-                <ul v-if="emailErrors.length">
+                <div>
+                <label id="eggs">E-mail</label>
+                <input id="chicken"  type="text" placeholder="Enter your Email" v-model="email" required />
+                 <ul v-if="emailErrors.length">
                     <li v-for="e in emailErrors" :key="e">{{  e  }}</li>
                 </ul>
             </div>
-
-            <!-- TODO: newsletter frequency in a dropdown menu: weekly (default), fortnightly, monthly -->
-            <div class="field">
-                <label>Newsletter frequency</label>
+             <!-- TODO: newsletter frequency in a dropdown menu: weekly (default), fortnightly, monthly -->
+            <div>
+                <label id="eggs">Newsletter frequency</label>
                 <div class="ui selection dropdown">
                     <input type="hidden" name="frequency">
                     <i class="dropdown icon"></i>
@@ -49,10 +52,10 @@
                     </ul>
                 </div>
             </div>
-
-            <button class="ui button" type="submit">Confirm</button>
+            
+           <button class="ui button" id="btn" type="submit">Confirm</button>
         </form>
-    </div>
+    </div>    
 </template>
 
 <script>
@@ -150,4 +153,49 @@ export default {
 </script>
 
 <style>
+.error {
+    color: red;
+}
+.form1{
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 10px;
+    text-align: center;
+
+}
+.text{
+    text-align: center;
+    justify-items: center;
+}
+h1{
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+.text p, .text span{
+    font-size: 190%;
+    margin-bottom: 20px;
+}
+.text span{
+    text-decoration: underline;
+    font-weight: bold;
+}
+#chicken {
+    text-align: center;
+    width: 70%;
+}
+#eggs{
+    font-size: 125%;
+    display: inline-block;
+
+}
+#btn{
+    margin:5px;
+    background-color: rgb(220, 247, 247);
+    border-radius: 5px;
+    width: 10em;
+    margin: 10px auto;
+}
+.checkbox{
+    margin: 10px;
+}
 </style>
