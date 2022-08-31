@@ -20,8 +20,8 @@
 
 
     </div>
-    <div class="ui text container">
-      <div class="ui one column grid">
+    <div class="ui container">
+      <div class="ui one column">
         <div class="cat">
           <router-view />
         </div>
@@ -83,7 +83,7 @@ button.ui.button {
 @media (min-width: 540px) {
   .nav {
     text-align: center;
-    justify-content: space-around;
+    display: block;
     height: 100px;
     width: 100%;
     line-height: 100px;

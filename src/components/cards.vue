@@ -39,22 +39,25 @@
 
 <style scoped>
 #cards{
-    display: inline-block;
-    text-align: center;
+    display: inline;
+    justify-items: center!important;
     width: 20em;
-    margin: 1em;
+    text-align: center;
 }
 #box1, #box2{
     margin-bottom: 2em;
     display: flex;
+}
+@media(min-width: 540px) {
+
 }
 @media (min-width: 1000px){
     #cards{
         width: 100%;
         display: flex;
         justify-content: space-between;
-        text-align: center;
-        margin: 1em;
+        
+       
     }
     #box1, #box2,#box3{
         margin:15px;
