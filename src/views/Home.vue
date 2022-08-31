@@ -6,7 +6,7 @@
             <div id="heroContainer">
                 <!-- <img src="https://www.si.edu/sites/default/files/newsdesk/press_releases/picture1_1.jpg" alt="aerotaxi" /> -->
             </div>
-        <button class="btn">Book a Trip</button>
+        <button class="btn">Book a Ride</button>
         <subscribeform />
         <cards />
     </div>
@@ -36,31 +36,38 @@ export default {
     border-radius: 15px;
 }
 
-#heroContainer {
-    /* width: 100vw; */
-}
-
 #title {
     text-align: center;
     font-family: 'Anybody', cursive;
     text-decoration: none;
     font-size: 32px;
+    text-shadow: 2px 2px 5px #1B9B9B;
 }
 
-.btn {
+.btn{
+    font-weight: bold;
+    font-size: 120%;
     border-radius: 30px;
-    width: 7em;
+    border: none;
+    width: 15em;
     height: 3em;
     margin: 1em;
     text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto 50px auto;
+    background-color: #7A4EF4;
+    color: #fff;
 }
 
+@media (min-width: 1000px){
+    .btn{
+    font-size: 200%;
+    font-weight: bold;
+    }
 @media (min-width: 640px) {
     #title {
         font-size: 64px;
     }
+}
 }
 </style>

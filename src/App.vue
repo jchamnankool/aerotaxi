@@ -21,7 +21,7 @@
     </div>
     <div class="ui text container">
       <div class="ui one column grid">
-        <div class="column">
+        <div class="cat">
           <router-view />
         </div>
       </div>
@@ -34,12 +34,13 @@
 
 <style>
 body {
-  background-color: #212121;
+  background-image: linear-gradient(to right, #2C4B4B, #252224, #252224, #252224, #2C4B4B);
   color: #fff;
 }
+
 #app>div.nav {
-  margin-bottom: 1.5em;
-  font-size: 120%;
+  max-width: 100vw;
+  margin: 0 auto;
 }
 
 .nav {
