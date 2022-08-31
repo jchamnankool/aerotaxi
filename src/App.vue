@@ -2,7 +2,6 @@
   <div id="app">
 
     <div class="nav">
-      <!-- <div class="ui left aligned container"> -->
           <div>
           <router-link to="/" exact class="item">
             <i class="home icon lnk" /> Home
@@ -23,7 +22,7 @@
     </div>
     <div class="ui text container">
       <div class="ui one column grid">
-        <div class="column">
+        <div class="cat">
           <router-view />
         </div>
       </div>
@@ -35,6 +34,10 @@
 </script>
 
 <style>
+#app{
+  max-width: 100vw;
+  margin: 0 auto;
+}
 #app > div.nav {
   margin-bottom: 1.5em;
 }
@@ -47,14 +50,6 @@
 }
 .nav i{
   margin-left: 8px;
-}
-
-.myFlash {
-  width: 250px;
-  margin: 10px;
-  position: absolute;
-  top: 50px;
-  right: 0;
 }
 
 input {

@@ -6,27 +6,29 @@
         </div>
         <form class='ui form' ref='form' @submit.prevent='submit'>
             <div>
-                <label id="eggs">First Name</label>
+                <label id="eggs">First Name
                
                 <input id="chicken" type="text" placeholder="Enter your name" v-model="firstName" required />
                 <ul v-if="firstNameErrors.length">
                     <li v-for="e in firstNameErrors" :key="e">{{  e  }}</li>
                 </ul>
-
+                </label>
             </div>
                 <div>
-                <label id="eggs"> Surname</label>
+                <label id="eggs"> Surname
                 <input id="chicken"  type="text" placeholder="Enter your Surname" v-model="lastName" required  />
                 <ul v-if="lastNameErrors.length">
                     <li v-for="e in lastNameErrors" :key="e">{{  e  }}</li>
                 </ul>
+                </label>
             </div>
                 <div>
-                <label id="eggs">E-mail</label>
+                <label id="eggs">E-mail
                 <input id="chicken"  type="text" placeholder="Enter your Email" v-model="email" required />
                  <ul v-if="emailErrors.length">
                     <li v-for="e in emailErrors" :key="e">{{  e  }}</li>
                 </ul>
+                </label>
             </div>
              <!-- TODO: newsletter frequency in a dropdown menu: weekly (default), fortnightly, monthly -->
             <div>
@@ -180,7 +182,7 @@ h1{
 }
 #chicken {
     text-align: center;
-    width: 70%;
+    width: 300px;
 }
 #eggs{
     font-size: 125%;
