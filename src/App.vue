@@ -8,13 +8,10 @@
             <i class="home icon lnk" /> Home
           </router-link>
           <router-link to="#1" class="item">
-            <i class="graduation cap icon lnk" /> About
+            <i class="graduation cap icon lnk" /> Safety
           </router-link>
           <router-link to="#2" class="item">
-            <i class="calendar alternate icon lnk" /> Events
-          </router-link>
-          <router-link to="/Newsletter" class="item">
-            <i class="users icon lnk" /> Newsletter
+            <i class="calendar alternate icon lnk" /> Help
           </router-link>
           <router-link to="#4" class="ui item">
             <i class="ui right aligned user icon" />

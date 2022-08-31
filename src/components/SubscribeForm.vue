@@ -47,12 +47,12 @@
                 <div class="ui checkbox">
                     <input class="ui checkbox" type="checkbox" v-model="agreed" />
                     <label>I agree to the Privacy Policy and Terms and Conditions</label>
-                    <ul v-if="emailErrors.length">
+                    <ul v-if="agreeError !== ''">
                         <li>{{  agreeError  }}</li>
                     </ul>
                 </div>
             </div>
-            
+
            <button class="ui button" id="btn" type="submit">Confirm</button>
         </form>
     </div>    
@@ -118,6 +118,15 @@ export default {
                 this.emailErrors.push("❌ An email address must contain at least one full stop (.)");
             }
         },
+        generateVoucherCode: function() {
+            const randomNum = Math.floor(Math.random() * 999);
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let randomLetters = "";
+            for (let i = 0; i < 4; i++) {
+                randomLetters += letters.charAt(Math.floor(Math.random() * letters.length));
+            }
+            return randomLetters + randomNum;
+        },
         submit: function () {
             this.validateFirstName(this.firstName);
             this.validateLastName(this.lastName);
@@ -136,7 +145,8 @@ export default {
                 const templateParams = {
                     firstName: this.firstName,
                     lastName: this.lastName,
-                    email: this.email
+                    email: this.email,
+                    voucherCode: this.generateVoucherCode()
                 };
 
                 emailjs.send('service_qvex2mk', 'template_0s841gu', templateParams, 'VDK0Jw8DR-D-cvBiu').then(function (response) {
