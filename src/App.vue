@@ -4,13 +4,13 @@
       <!-- <div class="ui left aligned container"> -->
       <div>
         <router-link to="/" exact class="item">
-          <i id="navIcon" class="home icon lnk" /> <span class="current">Home</span>
+          <i id="navIconCurrent" class="home icon lnk" /> <span class="current">Home</span>
         </router-link>
         <router-link to="#1" class="item">
-          <i id="navIcon" class="graduation cap icon lnk" /> Safety
+          <i id="navIcon" class="ambulance icon" /> Safety
         </router-link>
         <router-link to="#2" class="item">
-          <i id="navIcon" class="calendar alternate icon lnk" /> Help
+          <i id="navIcon" class="question circle outline icon" /> Help
         </router-link>
         <router-link to="#4" class="ui item">
           <i id="userIcon" class="ui right aligned user icon" />
@@ -51,12 +51,13 @@ body {
 }
 
 .nav a {
-  color: #fff;
+  color: #24BFBB;
+  font-size: 120%;
+  font-weight: bold;
 }
 
 .current {
-  color: #24BFBB;
-  font-weight: bold;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -87,6 +88,10 @@ button.ui.button {
 
 #navIcon {
   visibility: hidden;
+}
+
+#navIconCurrent {
+  color: #fff;
 }
 
 #userIcon {
@@ -128,6 +133,11 @@ button.ui.button {
 @media (min-width: 1000px) {
   .nav i {
     margin-left: 90px;
+  }
+
+  .nav a {
+    font-size: 150%;
+
   }
 }
 </style>

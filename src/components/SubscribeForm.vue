@@ -82,41 +82,41 @@ export default {
             this.firstNameErrors = [];
 
             if (firstName.length < 2) {
-                this.firstNameErrors.push("❌ A name must be at least two letters");
+                this.firstNameErrors.push("Invalid input: A name must be at least two letters");
             }
 
             if (/\d/.test(firstName)) {
-                this.firstNameErrors.push("❌ A name cannot contain a number");
+                this.firstNameErrors.push("Invalid input: A name cannot contain a number");
             }
 
             if (!/^[a-zA-Z0-9&._-]+$/.test(firstName)) {
-                this.firstNameErrors.push("❌ A name cannot contain special characters");
+                this.firstNameErrors.push("Invalid input: A name cannot contain special characters");
             }
         },
         validateLastName: function (lastName) {
             this.lastNameErrors = [];
 
             if (lastName.length < 2) {
-                this.lastNameErrors.push("❌ A name must be at least two letters");
+                this.lastNameErrors.push("Invalid input: A name must be at least two letters");
             }
 
             if (/\d/.test(lastName)) {
-                this.lastNameErrors.push("❌ A name cannot contain a number");
+                this.lastNameErrors.push("Invalid input: A name cannot contain a number");
             }
 
             if (!/^[a-zA-Z0-9&._-]+$/.test(lastName)) {
-                this.lastNameErrors.push("❌ A name cannot contain special characters");
+                this.lastNameErrors.push("Invalid input: A name cannot contain special characters");
             }
         },
         validateEmail: function (email) {
             this.emailErrors = [];
 
             if (!/\b((?!@)\w)*@(?!.*@)\w*/.test(email)) {
-                this.emailErrors.push("❌ An email address must contain exactly one @");
+                this.emailErrors.push("Invalid input: An email address must contain exactly one @");
             }
 
             if (!/\./.test(email)) {
-                this.emailErrors.push("❌ An email address must contain at least one full stop (.)");
+                this.emailErrors.push("Invalid input: An email address must contain at least one full stop (.)");
             }
         },
         generateVoucherCode: function () {
@@ -155,6 +155,14 @@ export default {
                 }, function (error) {
                     console.log('FAILED...', error);
                 });
+
+                // reset fields
+                this.firstName = "";
+                this.lastName = "";
+                this.email = "";
+                this.agreed = false;
+
+                alert("You have successfully subscribed to the newsletter! Please check your email.");
             } else {
                 console.log("Submission failed. Please fix your input.");
             }
@@ -169,9 +177,10 @@ export default {
 }
 
 .form1 {
+    background-image: linear-gradient(to right, rgb(190, 217, 200), rgb(47, 219, 159));
     border: 2px solid black;
     border-radius: 15px;
-    margin: 10px;
+    margin: 24px 10px;
     text-align: center;
     background-color: grey;
     color: #000;
@@ -224,5 +233,10 @@ h1 {
 
 .checkbox {
     margin: 10px;
+}
+
+ul {
+    list-style: none;
+    color: red;
 }
 </style>
