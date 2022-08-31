@@ -1,11 +1,8 @@
 <template>
     <div class="container">
         <h1 id="title" class="ui left aligned">AeroTaxi</h1>
-        <!-- <img src="https://www.si.edu/sites/default/files/newsdesk/press_releases/picture1_1.jpg" alt="taxi"
-            class="image"> -->
-            <div id="heroContainer">
-                <!-- <img src="https://www.si.edu/sites/default/files/newsdesk/press_releases/picture1_1.jpg" alt="aerotaxi" /> -->
-            </div>
+        <img src="https://www.si.edu/sites/default/files/newsdesk/press_releases/picture1_1.jpg" alt="taxi"
+            class="image">
         <button class="btn">Book a Ride</button>
         <subscribeform />
         <div class="help">
