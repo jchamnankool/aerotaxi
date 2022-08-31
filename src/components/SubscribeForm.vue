@@ -169,6 +169,7 @@ export default {
     color: red;
 }
 .form1{
+    background-image: linear-gradient(to right, rgb(190, 217, 200), rgb(47, 219, 159));
     border: 2px solid black;
     border-radius: 15px;
     margin: 10px;
