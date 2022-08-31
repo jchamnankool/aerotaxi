@@ -50,7 +50,6 @@
                 </div>
             </div>
 
-
             <button class="ui button" type="submit">Confirm</button>
         </form>
     </div>
@@ -59,14 +58,6 @@
 <script>
 import db from "../firestoreInit";
 import emailjs from "@emailjs/browser";
-import $ from "jquery";
-
-$(document).ready(
-        function () {
-            $('.ui.checkbox')
-                    .checkbox()
-                    ;
-        });
 
 export default {
     data: function () {
