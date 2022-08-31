@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <h1 id="title" class="ui left aligned">AeroTaxi</h1>
         <!-- <img src="https://www.si.edu/sites/default/files/newsdesk/press_releases/picture1_1.jpg" alt="taxi"
             class="image"> -->
@@ -8,7 +8,9 @@
             </div>
         <button class="btn">Book a Ride</button>
         <subscribeform />
-        <cards />
+        <div class="help">
+            <cards />
+        </div>
     </div>
 </template>
 
@@ -27,6 +29,15 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Anybody:ital@1&display=swap');
+
+.help{
+    padding: 0;
+    margin: 0 auto;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
 
 .image {
     display: block;
