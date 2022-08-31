@@ -47,7 +47,7 @@
             <div class="field">
                 <div class="ui checkbox">
                     <input class="ui checkbox" type="checkbox" v-model="agreed" />
-                    <label>I agree to the Privacy Policy and Terms and Conditions</label>
+                    <label>I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a></label>
                     <ul v-if="agreeError !== ''">
                         <li>{{  agreeError  }}</li>
                     </ul>
@@ -182,9 +182,12 @@ export default {
     border-radius: 15px;
     margin: 24px 10px;
     text-align: center;
-    background-color: grey;
     color: #000;
     padding: 24px 0;
+}
+
+a {
+    color: #7A4EF4;
 }
 
 .formField {
@@ -220,7 +223,6 @@ h1 {
 #eggs {
     font-size: 125%;
     display: inline-block;
-
 }
 
 #btn {
