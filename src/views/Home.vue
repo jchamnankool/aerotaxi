@@ -1,8 +1,11 @@
 <template>
     <div>
         <h1 id="title" class="ui left aligned">AeroTaxi</h1>
-        <img src="https://www.si.edu/sites/default/files/newsdesk/press_releases/picture1_1.jpg" alt="taxi"
-            class="image">
+        <!-- <img src="https://www.si.edu/sites/default/files/newsdesk/press_releases/picture1_1.jpg" alt="taxi"
+            class="image"> -->
+            <div id="heroContainer">
+                <!-- <img src="https://www.si.edu/sites/default/files/newsdesk/press_releases/picture1_1.jpg" alt="aerotaxi" /> -->
+            </div>
         <button class="btn">Book a Trip</button>
         <subscribeform />
         <cards />
@@ -31,6 +34,10 @@ export default {
     margin-right: auto;
     width: 100%;
     border-radius: 15px;
+}
+
+#heroContainer {
+    /* width: 100vw; */
 }
 
 #title {

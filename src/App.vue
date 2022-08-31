@@ -1,11 +1,10 @@
 <template>
   <div id="app">
-
     <div class="nav">
       <!-- <div class="ui left aligned container"> -->
       <div>
         <router-link to="/" exact class="item">
-          <i id="navIcon" class="home icon lnk" /> <strong>Home</strong>
+          <i id="navIcon" class="home icon lnk" /> <span class="current">Home</span>
         </router-link>
         <router-link to="#1" class="item">
           <i id="navIcon" class="graduation cap icon lnk" /> Safety
@@ -34,29 +33,39 @@
 </script>
 
 <style>
+body {
+  background-color: #212121;
+  color: #fff;
+}
 #app>div.nav {
   margin-bottom: 1.5em;
   font-size: 120%;
 }
 
 .nav {
-  background-color: #000000;
+  background-color: #2B2668;
   display: flex;
   justify-content: space-evenly;
   height: 70px;
   line-height: 70px;
 }
 
-.nav i {
-  margin-left: 8px;
+.nav a {
+  color: #fff;
 }
 
-.myFlash {
-  width: 250px;
-  margin: 10px;
-  position: absolute;
-  top: 50px;
-  right: 0;
+.current {
+  color: #24BFBB;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.home {
+  color: #24BFBB;
+}
+
+.nav i {
+  margin-left: 8px;
 }
 
 input {
