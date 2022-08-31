@@ -98,10 +98,10 @@ button.ui.button {
     margin-left: 60px;
   } 
 }
-
 @media (min-width: 1000px) {
   .nav i{
     margin-left: 90px;
   } 
 }
 </style>
+
